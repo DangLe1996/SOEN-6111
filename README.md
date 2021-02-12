@@ -17,9 +17,3 @@ Abstract (100 words)
 I. Introduction (300 words): context, objectives, presentation of the problem to solve, related work.
 II. Materials and Methods (400 words): the dataset(s), technologies and algorithms that will be used.
 
-
-Feb 12 Meeting
-- We got a population of each us counties from https://www.census.gov/data/datasets/time-series/demo/popest/2010s-counties-total.html#par_textimage_70769902, which will be used in the project. We can use population to cluster as well, to find counties with similar populations and compare the covid cluster to find any corelation, if exist. 
-- Clsutering techniques: k-means clustering (Point assignment) and One method of Hierarchical clustering (TBD). 
-- Distance calculation is the difference in number of covid cases, taken at a predetermined interval ( every 2 weeks, every month, etc) to reduce the entropy of the data. This distance will be used to cluster.
-- Game plan: Dang will look at Hierachi and Vasu will looks at k-means for more details. 
