@@ -1,6 +1,28 @@
 
 import dask.dataframe as df
 
+import pandas as pd
+import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import os
+from datetime import datetime
+
+from sklearn.cluster import KMeans
+from sklearn.model_selection import train_test_split
+from sklearn.decomposition import PCA
+from sklearn.metrics import mean_squared_error
+from sklearn.preprocessing import StandardScaler
+
+
+def transformDataIntoDateTime(data):
+    data = data.set_index('State').drop(['countyFIPS', 'stateFIPS', 'County Name'], axis=1).compute()
+    data = data.transpose()
+    data = data.reset_index()
+    data['dateTime'] = pd.to_datetime(data['index'])
+    data = data.drop('index', axis = 1).set_index('dateTime')
+    return data
+
 class readDataClass:
     dataDF = ''
     filterByCounty = (lambda a: a['countyFIPS'] != 0)
