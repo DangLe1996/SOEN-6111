@@ -7,7 +7,7 @@ total_recent = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/u
 live_data = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/live/us-counties.csv'
 #%%
 
-liveData = pd.read_csv(total_recent,  dtype={"fips": str})
+liveData = pd.read_csv(total_live_data,  dtype={"fips": str})
 
 #%%
 
