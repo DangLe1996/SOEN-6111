@@ -1,7 +1,6 @@
-from sklearn.cluster import AgglomerativeClustering as AC
 import os
 import pathlib
-from utils import readDataClass as RC
+from Archieve.utils import readDataClass as RC
 import numpy as np
 from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram

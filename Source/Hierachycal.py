@@ -2,6 +2,10 @@
 
 #%%
 import pandas as pd
+
+from sklearn.metrics import silhouette_score, davies_bouldin_score
+from sklearn.cluster import AgglomerativeClustering
+
 total_live_data = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
 total_recent = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties-recent.csv"
 live_data = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/live/us-counties.csv'
@@ -27,7 +31,8 @@ result = np.array(testData)
 
 from sklearn.cluster import KMeans
 
-km = KMeans(n_clusters=10, init='random', n_init=1, max_iter=300, random_state=0)
+
+km = AgglomerativeClustering( n_clusters=3)
 km.fit(result)
 #%%
 
@@ -54,9 +59,12 @@ fig.show()
 
 
 
+silihouette_score = silhouette_score(testData, km.labels_, metric='euclidean')
 
+print("silihouette_score"+str(silihouette_score))
 
-
+davies_bouldin_score = davies_bouldin_score(testData, km.labels_)
+print("davies_bouldin_score"+str(davies_bouldin_score))
 
 
 
