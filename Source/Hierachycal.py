@@ -31,8 +31,9 @@ result = np.array(testData)
 
 from sklearn.cluster import KMeans
 
+numberOfCluster = 7
 
-km = AgglomerativeClustering( n_clusters=3)
+km = AgglomerativeClustering( n_clusters=numberOfCluster)
 km.fit(result)
 #%%
 
@@ -50,7 +51,7 @@ with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-c
 print('Begin plotting')
 import plotly.graph_objects as go
 fig = go.Figure(go.Choroplethmapbox(geojson=counties, locations=finalDF['fips'], z=finalDF['classification'],
-                                    colorscale="Viridis", zmin=0, zmax=10,
+                                    colorscale="Viridis", zmin=0, zmax=6,
                                     marker_opacity=0.5, marker_line_width=0))
 fig.update_layout(mapbox_style="carto-positron",
                   mapbox_zoom=3, mapbox_center = {"lat": 37.0902, "lon": -95.7129})
