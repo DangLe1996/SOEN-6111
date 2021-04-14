@@ -23,29 +23,6 @@ The dataset we are using here is taken every day in 2020, thus the appropriate t
 
 [US Population Consensus](https://www.census.gov/data/datasets/time-series/demo/popest/2010s-counties-total.html#par_textimage_70769902)
 
-
-## Related Work
-
-[A benchmark study on time series clustering]( https://www.sciencedirect.com/science/article/pii/S2666827020300013)
-
-[How to Apply K-means Clustering to Time Series Data ](https://towardsdatascience.com/how-to-apply-k-means-clustering-to-time-series-data-28d04a8f7da3)
-
-
-# Materials and methods:
-
-## Dataset: 
-The dataset we are using is from databricks for the USA confirmed case.
-
-## Dataset Collection: 
-The dataset collected for around one year starting from January 2020 to January 2021.
-The dataset is about the daily confirmed case and it is cumulative day by day.
-
-## Dataset Information:
-We will use around 70% data as a training set and 30% for the testing.
-
-## Dataset Preprocessing:
-The dataset is already preprocessed and it is very well balanced and accurate so we don't need any pre-processing step.
-
 ## Technologies:
 
 Python as general programming language
@@ -58,7 +35,8 @@ The main technology that this project aims to use is unsupervised clustering, wh
 The two selected clustering techniques are different in goals. K-means clustering aims to optimally divide the datasets into k numbers of distinct clusters, whereas Ward-hierarchical clustering aims to build nested clusters and try to minimize the sum of squared differences within all clusters. However, according to the scikit-learn website, both methods use the during their execution, which is the distance between points, thus the same dataset can be shared and applied between them. 
 [Source](https://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering)
 
-
+## Final Report
+The final report for this project is written in term of a jupyter notebook, which includes the code, figures and also analysis of the chosen dataset. Please find the notebook in the repository. 
 
 
 
